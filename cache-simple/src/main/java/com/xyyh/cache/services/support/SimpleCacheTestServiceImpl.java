@@ -1,4 +1,4 @@
-package com.xyyh.cas.client.services.support;
+package com.xyyh.cache.services.support;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.xyyh.cas.client.services.CacheTestService;
+import com.xyyh.cache.services.CacheTestService;
 
 @Service
 public class SimpleCacheTestServiceImpl implements CacheTestService {

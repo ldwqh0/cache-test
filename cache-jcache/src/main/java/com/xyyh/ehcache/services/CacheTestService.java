@@ -1,4 +1,4 @@
-package com.xyyh.cas.client.services;
+package com.xyyh.ehcache.services;
 
 public interface CacheTestService {
 	public String get(String id);
