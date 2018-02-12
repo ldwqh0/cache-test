@@ -1,6 +1,7 @@
 package com.xyyh.ehcache.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,21 @@ public class CacheController {
 
 	@Autowired
 	private CacheTestService cacheTestService;
+ 
+	/**
+	 * 注入Spring Boot生成的CacheManager
+	 */
+	@Autowired
+	private CacheManager cacheManager;
+
+	/**
+	 * 获取并显示实际使用的CacheManager
+	 * @return
+	 */
+	@GetMapping("manager")
+	public String getManager() {
+		return cacheManager.toString();
+	}
 
 	/**
 	 * 根据ID获取信息

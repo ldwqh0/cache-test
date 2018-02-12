@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import com.xyyh.ehcache.services.CacheTestService;
 
-
 @Service
 public class SimpleCacheTestServiceImpl implements CacheTestService {
 	private static final Logger logger = LoggerFactory.getLogger(SimpleCacheTestServiceImpl.class);
@@ -30,7 +29,7 @@ public class SimpleCacheTestServiceImpl implements CacheTestService {
 	private CacheManager cacheManager;
 
 	@Override
-	@Cacheable(cacheNames = "test")
+	@Cacheable(cacheNames = "test", sync = true)
 	public String get(String id) {
 		// 记录数据产生的时间，用于测试对比
 		long time = new Date().getTime();

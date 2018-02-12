@@ -1,0 +1,9 @@
+spring:
+  cache:
+#    cache-names:
+#    - test
+    jcache:
+      config: classpath:cache.xml
+    type: redis
+  redis:
+    host: 127.0.0.1
